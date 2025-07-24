@@ -3,32 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hello CI/CD</title>
+  <title>My First CI/CD Project</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: #f0f4f8;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 50px;
+      padding: 20px;
     }
+
+    .container {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1.5s ease-out;
+    }
+
     h1 {
-      color: #0070f3;
       font-size: 3em;
+      color: #00e0ff;
+      margin-bottom: 20px;
     }
+
     p {
       font-size: 1.2em;
-      color: #333;
+      line-height: 1.6;
     }
+
+    .highlight {
+      color: #00ffab;
+      font-weight: bold;
+    }
+
     footer {
       margin-top: 30px;
       font-size: 0.9em;
-      color: #999;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <h1>🚀 Hello, CI/CD World!</h1>
-  <p>This is my first automated CI/CD deployed website using GitHub Actions & Vercel!</p>
-  <footer>Built by [Your Name] 🛠️</footer>
+  <div class="container">
+    <h1 class="pulse">🚀 Hello, DevOps World!</h1>
+    <p>
+      This is my <span class="highlight">first CI/CD project</span> — a simple website that auto-builds and auto-deploys using
+      <span class="highlight">GitHub Actions</span> and <span class="highlight">Vercel</span>.  
+    </p>
+    <p>
+      Every time I update the code, it gets tested and redeployed <strong>without any manual steps!</strong>
+    </p>
+    <footer>
+      Built by Thanusha • #CI #CD #DevOps
+    </footer>
+  </div>
 </body>
 </html>
+
